@@ -1,11 +1,5 @@
 FROM ubuntu:16.04
 MAINTAINER Isabel Ryan "ryani1@student.op.ac.nz"
-RUN mkdir /data 
-RUN touch /data/foo
-RUN touch /data/bar
-RUN touch /data/baz
-VOLUME /data
-MAINTAINER Isabel Ryan "ryani1@student.op.ac.nz" 
 RUN apt-get -q update && apt-get -yq dist-upgrade
 RUN apt-get -yq install apache2
 ENV APACHE_RUN_USER www-data
